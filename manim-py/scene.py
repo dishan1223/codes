@@ -1,5 +1,7 @@
-#code execution
-# manim -pql scene.py CreateCircle(name of the class)
+# basic shapes -> 
+#   Circle()
+#   Triangle()
+#   Square()
 
 # .set_fill() can be use to access some particular property of mobject
 
@@ -12,6 +14,7 @@
 
 from manim import *
 
+# manim -pql scene.py CreateCircle(name of the class)
 class CreateCircle(Scene):
     def construct(self):
         circle = Circle() # create a circle
