@@ -37,3 +37,20 @@ class SquareToCircle(Scene):
         self.play(Create(square))
         self.play(Transform(square, circle))
         self.play(FadeOut(square))
+
+# manim -pql scene.py CircleToTriangle 
+class CircleToTriangle(Scene):
+    def construct(self):
+        # create circle object and add style property
+        circle = Circle() 
+        circle.set_fill(RED, opacity=0.5)
+
+        # create a tirangle object and add style property
+        triangle = Triangle()
+        triangle.set_fill(RED, opacity=0.5)
+
+        self.play(Create(circle))
+        self.play(Transform(circle, triangle))
+        self.play(FadeOut(circle))
+
+
