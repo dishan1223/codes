@@ -5,6 +5,8 @@
 
 # .set_fill() can be use to access some particular property of mobject
 
+# with obj1.next_to() , objects can be places UP,DOWN,LEFT,RIGHT relative to obj1
+
 # there can be multiple classes to animate differect items
 
 #self.play() functions =
