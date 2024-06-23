@@ -27,12 +27,10 @@ class CreateCircle(Scene):
 class SquareToCircle(Scene):
     def construct(self):
         # create circle object and add style property
-        circle = Circle() 
-        circle.set_fill(RED, opacity=0.5)
+        circle = Circle().set_fill(RED, opactiy=0.5) 
 
         # create a square object and add style property
-        square = Square()
-        square.rotate(PI/4) # rotate square a certain ammount
+        square = Square().rotate(PI/4) #rotate square a certain amount
 
         self.play(Create(square))
         self.play(Transform(square, circle))
@@ -42,12 +40,10 @@ class SquareToCircle(Scene):
 class CircleToTriangle(Scene):
     def construct(self):
         # create circle object and add style property
-        circle = Circle() 
-        circle.set_fill(RED, opacity=0.5)
+        circle = Circle().set_fill(RED, opacity=0.5) 
 
         # create a tirangle object and add style property
-        triangle = Triangle()
-        triangle.set_fill(RED, opacity=0.5)
+        triangle = Triangle().set_fill(RED, opacity=0.5)
 
         self.play(Create(circle))
         self.play(Transform(circle, triangle))
@@ -58,19 +54,14 @@ class CircleToTriangle(Scene):
 class SquareAndCircle(Scene):
     def construct(self):
         # create a circle and square object
-        circle = Circle()
-        circle.set_fill(PINK, opacity=0.5)
+        circle = Circle().set_fill(PINK, opacity=0.5)
         
-        square = Square()
-        square.set_fill(BLUE, opacity=0.5)
+        square = Square().set_fill(BLUE, opacity=0.5)
 
-        tri = Triangle()
-        tri.set_fill(BLUE, opacity=0.5)
+        tri = Triangle().set_fill(BLUE, opacity=0.5)
         
-        c1 = Circle() 
-        c1.set_fill(BLUE, opacity=1)
-        c2 = Circle() 
-        c2.set_fill(BLUE, opacity=1)
+        c1 = Circle().set_fill(BLUE, opacity=1) 
+        c2 = Circle().set_fill(BLUE, opacity=1) 
 
         #.next_to() function here takes square and places it at the RIGHT side of the circle
         #   buff is basically space between the two object
