@@ -76,12 +76,15 @@ class SquareAndCircle(Scene):
 
 # Using .animate syntax to animate methods
 
-class AnimateSquareToCircle(Scene):
+# manim -pql scene.py AnimatedSquareToCircle
+class AnimatedSquareToCircle(Scene):
     def construct(self):
         square = Square().set_stroke(color=BLUE, width=2)
         circle = Circle().set_stroke(color=BLUE, width=2)
         
         self.play(Create(square))
-
-
-
+        self.play(square.animate.rotate(PI/4))
+        self.play(Transform(square,circle)) # this method transforms one object to another
+        self.play(
+            square.animate.set_fill(PINK, opacity=0.5)
+        ) # color the circle at the end
