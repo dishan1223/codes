@@ -77,6 +77,6 @@ class SquareAndCircle(Scene):
 
         square.next_to(circle, RIGHT, buff=0.5)
         tri.next_to(circle, LEFT, buff=0.5)
-        c1.next_to(circle, TOP, buff=0.5)
-        c2.next_to(circle, TOP, buff=0.5)
+        c1.next_to(circle, UP, buff=0.5)
+        c2.next_to(circle, DOWN, buff=0.5)
         self.play(Create(circle), Create(square), Create(tri)) # render the objects to the scene
