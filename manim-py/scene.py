@@ -67,10 +67,16 @@ class SquareAndCircle(Scene):
         tri = Triangle()
         tri.set_fill(BLUE, opacity=0.5)
         
+        c1 = Circle() 
+        c1.set_fill(BLUE, opacity=1)
+        c2 = Circle() 
+        c2.set_fill(BLUE, opacity=1)
 
         #.next_to() function here takes square and places it at the RIGHT side of the circle
         #   buff is basically space between the two object
 
         square.next_to(circle, RIGHT, buff=0.5)
         tri.next_to(circle, LEFT, buff=0.5)
+        c1.next_to(circle, TOP, buff=0.5)
+        c2.next_to(circle, TOP, buff=0.5)
         self.play(Create(circle), Create(square), Create(tri)) # render the objects to the scene
