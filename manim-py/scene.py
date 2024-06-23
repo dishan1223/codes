@@ -4,7 +4,7 @@
 #   Square()
 
 # .set_fill() can be use to access some particular property of mobject
-
+# .set_stroke(color=BLACK,width=2) this is an example to get a custom colored border for object
 # with obj1.next_to() , objects can be places UP,DOWN,LEFT,RIGHT relative to obj1
 
 # there can be multiple classes to animate differect items
@@ -73,3 +73,15 @@ class SquareAndCircle(Scene):
         c1.next_to(circle, UP, buff=0.5)
         c2.next_to(circle, DOWN, buff=0.5)
         self.play(Create(circle), Create(square), Create(tri), Create(c1),Create(c2)) # render the objects to the scene
+
+# Using .animate syntax to animate methods
+
+class AnimateSquareToCircle(Scene):
+    def construct(self):
+        square = Square().set_stroke(color=BLUE, width=2)
+        circle = Circle().set_stroke(color=BLUE, width=2)
+        
+        self.play(Create(square))
+
+
+
