@@ -53,6 +53,8 @@ class CircleToTriangle(Scene):
         self.play(Transform(circle, triangle))
         self.play(FadeOut(circle))
 
+
+# manim -pql scene.py SquareAndCircle
 class SquareAndCircle(Scene):
     def construct(self):
         # create a circle and square object
