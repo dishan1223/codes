@@ -53,4 +53,17 @@ class CircleToTriangle(Scene):
         self.play(Transform(circle, triangle))
         self.play(FadeOut(circle))
 
+class SquareAndCircle(Scene):
+    def construct(self):
+        # create a circle and square object
+        circle = Circle()
+        circle.set_fill(PINK, opacity=0.5)
+        
+        square = Square()
+        square.set_fill(BLUE, opacity=0.5)
+        
+        #.next_to() function here takes square and places it at the RIGHT side of the circle
+        #   buff is basically space between the two object
 
+        square.next_to(circle, RIGHT, buff=0.5)
+        self.play(Create(circle), Create(square)) # render the objects to the scene
