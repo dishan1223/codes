@@ -95,15 +95,14 @@ class SquareToCircleToTriangle(Scene):
         square = Square().set_fill(BLUE, opacity=0.5).set_stroke(color=BLUE, width=2)
         circle = Circle().set_fill(PINK, opacity=0.5).set_stroke(color=PINK, width=2)
         triangle = Triangle().set_fill(BLUE, opacity=0.5).set_stroke(color=BLUE, width=2)
-        
+
         self.play(Create(square))
         self.play(square.animate.rotate(PI/4))
-        self.play(Transform(square,circle))
-        self.play(square.set_fill(BLUE, opacity=0.7))
-        self.play(Transform(square,triangle))
+        self.play(Transform(square, circle))
+        self.play(square.animate.set_fill(PINK, opacity=0.5))
+        self.play(Transform(square, triangle))
+        self.play(square.animate.set_fill(BLUE, opacity=0.5))
         self.wait(2)
-
-
 
 
 
