@@ -102,6 +102,7 @@ class SquareToCircleToTriangle(Scene):
         self.play(square.animate.set_fill(PINK, opacity=0.5))
         self.play(Transform(square, triangle))
         self.play(square.animate.set_fill(BLUE, opacity=0.5))
+        # self.wait(seconds) to wait a certain amount of time after the animation is finished
         self.wait(2)
 
 
