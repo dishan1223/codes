@@ -88,3 +88,22 @@ class AnimatedSquareToCircle(Scene):
         self.play(
             square.animate.set_fill(PINK, opacity=0.5)
         ) # color the circle at the end
+
+# manim -pql scene.py SquareToCircleToTriangle 
+class SquareToCircleToTriangle(Scene):
+    def construct(self):
+        square = Square().set_fill(BLUE, opacity=0.5).set_stroke(color=BLUE, width=2)
+        circle = Circle().set_fill(PINK, opacity=0.5).set_stroke(color=PINK, width=2)
+        triangle = Triangle().set_fill(BLUE, opacity=0.5).set_stroke(color=BLUE, width=2)
+        
+        self.play(Create(square))
+        self.play(square.animate.rotate(PI/4))
+        self.play(Transform(square,circle))
+        self.play(square.set_fill(BLUE, opacity=0.7))
+        self.play(Transform(square,triangle))
+        self.wait(2)
+
+
+
+
+
