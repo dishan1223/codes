@@ -105,5 +105,17 @@ class SquareToCircleToTriangle(Scene):
         # self.wait(seconds) to wait a certain amount of time after the animation is finished
         self.wait(2)
 
+# manim -pql scene.py DifferentRotations
+class DifferectRotations(Scene):
+    def construct(self):
+        l_square = Square().set_fill(BLUE, opacity=0.7).shift(2*LEFT)
+        r_square = Square().set_fill(GREEN, opacity=0.7).shift(2*RIGHT)
+
+        self.play(
+            l_square.animate.rotate(PI),
+            Rotate(r_square, angle=PI),
+            run_time=2
+        )
+        self.wait(2)
 
 
