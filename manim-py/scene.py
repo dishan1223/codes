@@ -106,7 +106,7 @@ class SquareToCircleToTriangle(Scene):
         self.wait(2)
 
 # manim -pql scene.py DifferentRotations
-class DifferectRotations(Scene):
+class DifferentRotations(Scene):
     def construct(self):
         l_square = Square().set_fill(BLUE, opacity=0.7).shift(2*LEFT)
         r_square = Square().set_fill(GREEN, opacity=0.7).shift(2*RIGHT)
