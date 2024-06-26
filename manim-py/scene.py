@@ -118,4 +118,19 @@ class DifferentRotations(Scene):
         )
         self.wait(2)
 
-
+# manim -pql scene.py Transformations
+class Transformations(Scene):
+    def transform():
+        c = Circle().set_fill(PINK, opacity=0.5)
+        s = Square().set_fill(GREEN, opacity=0.5)
+        t = Triangle().set_fill(YELLOW, opacity=0.5)
+        
+        self.play(Create(c))
+        self.play(Transform(c,s))
+        self.wait(2)
+        self.play(Transform(c,t))
+        self.play(2)
+        self.play(FadeOut(c))
+        self.wait(2)
+    def construct(self):
+        self.transform()
