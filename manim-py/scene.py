@@ -131,4 +131,12 @@ class Transformations(Scene):
             self.play(Transform(c,shape))
             self.wait(1)
 
+# manim -pql scene.py TextTest
+class TextTest(Scene):
+    def construct(self):
+        text = Text("HELLO, WORLD!").scale(3)
+
+        self.add(text)
+
+
 
