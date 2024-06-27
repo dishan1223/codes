@@ -134,9 +134,10 @@ class Transformations(Scene):
 # manim -pql scene.py TextTest
 class TextTest(Scene):
     def construct(self):
-        text = Text("HELLO, WORLD!").scale(3)
+        text = Text("HELLO, WORLD!")
 
-        self.add(text)
-
+        self.play(Write(text), run_time=4)
+        self.wait(2)
+        self.remove(text)
 
 
