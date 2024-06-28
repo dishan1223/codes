@@ -140,4 +140,16 @@ class TextTest(Scene):
         self.wait(2)
         self.remove(text)
 
+# manim -pql scene.py TextInsideCircle
+class TextInsideCircle(Scene):
+    def construct(self):
+        c = Circle().set_fill(PINK, opacity=0.5).set_stroke(color=PINK,width=2)
+        text = Text("hello world")
+    
+        text.move_to(c.get_center())
+
+        self.play(Create(c))
+        self.play(Write(text),run_time=2)
+
+        self.wait(2)
 
