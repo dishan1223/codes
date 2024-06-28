@@ -144,7 +144,7 @@ class TextTest(Scene):
 class TextInsideCircle(Scene):
     def construct(self):
         c = Circle(radius=2).set_fill(PINK, opacity=0.5).set_stroke(color=PINK,width=2)
-        text = Text("hello world")
+        text = Text("hello world", font_size=26)
     
         text.move_to(c.get_center())
 
