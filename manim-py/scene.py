@@ -153,3 +153,15 @@ class TextInsideCircle(Scene):
 
         self.wait(2)
 
+class SquareWithText(Scene):
+    def construct(self):
+        s = Square().set_fill(BLUE,opacity=0.5)
+        text = Text("Square")
+
+        text.next_to(s,DOWN)
+
+        self.play(Create(s))
+        self.play(Write(text),run_time=1)
+        
+
+
