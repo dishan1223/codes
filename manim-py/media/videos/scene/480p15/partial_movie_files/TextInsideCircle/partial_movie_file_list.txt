@@ -1,4 +1,4 @@
 # This file is used internally by FFMPEG.
-file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/TextInsideCircle/1185818338_911573652_223132457.mp4'
-file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/TextInsideCircle/624642324_28763891_4128194268.mp4'
-file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/TextInsideCircle/624642324_784179552_2562000361.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/TextInsideCircle/1185818338_473405838_223132457.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/TextInsideCircle/624642324_28763891_2314081844.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/TextInsideCircle/624642324_784179552_1802806651.mp4'

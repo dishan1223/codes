@@ -143,7 +143,7 @@ class TextTest(Scene):
 # manim -pql scene.py TextInsideCircle
 class TextInsideCircle(Scene):
     def construct(self):
-        c = Circle().set_fill(PINK, opacity=0.5).set_stroke(color=PINK,width=2)
+        c = Circle(radius=2).set_fill(PINK, opacity=0.5).set_stroke(color=PINK,width=2)
         text = Text("hello world")
     
         text.move_to(c.get_center())
