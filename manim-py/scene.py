@@ -158,7 +158,7 @@ class SquareWithText(Scene):
         s = Square().set_fill(BLUE,opacity=0.5)
         text = Text("Square")
 
-        text.next_to(s,DOWN)
+        text.next_to(s,DOWN,buff=0.5)
 
         self.play(Create(s))
         self.play(Write(text),run_time=1)
