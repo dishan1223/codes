@@ -162,6 +162,16 @@ class SquareWithText(Scene):
 
         self.play(Create(s))
         self.play(Write(text),run_time=1)
+
+# manim -pql scene.py MoveAround        
+class MoveAround(Scene):
+    def construct(self):
+        square = Square(color=BLUE, fill_opacity=1)
         
+        self.play(Create(square))
+        self.play(square.animate.shift(LEFT))
+        self.play(square.animate.set_fill(ORANGE))
+        self.play(square.animate.scale(0.3))
+        self.play(square.animate.rotate(PI/4))
 
 
