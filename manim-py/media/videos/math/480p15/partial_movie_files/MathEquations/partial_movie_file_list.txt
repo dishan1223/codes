@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/wx/repos/codes/manim-py/media/videos/math/480p15/partial_movie_files/MathEquations/1185818338_35809906_223132457.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/math/480p15/partial_movie_files/MathEquations/624642324_784179552_1947558161.mp4'
