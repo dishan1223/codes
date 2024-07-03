@@ -1,3 +1,6 @@
+# to the MathTex or Tex user need to have Latex installed
+
+
 from manim import *
 
 class MathEquations(Scene):
