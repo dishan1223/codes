@@ -16,6 +16,99 @@
 
 from manim import *
 
+class WheelRotationWithExplanation(Scene):
+    def construct(self):
+        # Parameters
+        radius = 2  # This represents 5m in your example (scaled for visualization)
+        circumference = 2 * PI * radius
+
+        # Create a circle (the wheel)
+        wheel = Circle(radius=radius, color=BLUE)
+        wheel.set_fill(BLUE, opacity=0.1)
+
+        # Create a point P at the top of the wheel (initial position)
+        point_p = Dot(wheel.point_at_angle(0), color=RED)
+
+        # Create a line from the center of the wheel to point P
+        radius_line = Line(wheel.get_center(), wheel.point_at_angle(0), color=WHITE)
+
+        # Display the circle and point P initially
+        self.play(Create(wheel), Create(point_p), Create(radius_line))
+
+        # Add the explanation text for the radius and circumference
+        equation_text = MathTex(r"C = 2 \pi r", font_size=36).to_edge(UP)
+        radius_text = MathTex(r"r = 5\ m", font_size=32).next_to(equation_text, DOWN)
+        self.play(Write(equation_text), Write(radius_text))
+
+        # Wait for a moment to let the user read the initial state
+        self.wait(1)
+
+        # Show that the total distance covered by the wheel after 360 degrees
+        distance_text = MathTex(f"C = {circumference:.2f}\ m", font_size=32).to_edge(DOWN)
+        self.play(Write(distance_text))
+
+        # Animate the rotation of the wheel and point P moving along the circumference
+        self.play(Rotate(wheel, angle=PI * 2, about_point=wheel.get_center(), run_time=5, rate_func=linear))
+
+        # Remove old text, and show the distance again after rotation
+        self.play(FadeOut(distance_text), FadeOut(radius_text), FadeOut(equation_text))
+
+        # Visualizing the final position of point P
+        new_position_text = MathTex(f"Point P has rotated 360°", font_size=32).to_edge(UP)
+        self.play(Write(new_position_text))
+
+        # Create an arc representing the rotation (the path point P followed)
+        arc_path = Arc(radius=radius, angle=PI * 2, color=WHITE)
+        self.play(Create(arc_path))
+
+        # Highlight the total distance covered
+        total_distance_text = MathTex(f"Total Distance Covered = {circumference:.2f}\ m", font_size=32).next_to(arc_path, DOWN)
+        self.play(Write(total_distance_text))
+
+        # Final visualization: rotation of the wheel, point moving, and updating the distance
+        self.wait(2)
+
+        # Clean up and exit
+        self.play(FadeOut(new_position_text), FadeOut(total_distance_text), FadeOut(arc_path))
+        self.wait(1)
+
+
+#manim -pql scene.py WheelRotation
+
+class WheelRotation(Scene):
+    def construct(self):
+        # Parameters
+        radius = 2  # Setting the radius as 2 for visualization (which represents 5m in your example)
+        circumference = 2 * PI * radius
+        
+        # Create a circle (the wheel)
+        wheel = Circle(radius=radius, color=BLUE)
+
+        # Create a point P at the top of the wheel (initial position)
+        point_p = Dot(wheel.point_at_angle(0), color=RED)
+
+        # Add the wheel and the point P to the scene
+        self.play(Create(wheel), Create(point_p))
+        
+        # Distance text to display the circumference
+        distance_text = MathTex(f"Distance = {circumference:.2f}m").to_edge(UP)
+        self.play(Write(distance_text))
+
+        # Add a line to visualize the path (this will be redrawn as the wheel rotates)
+        path_line = Line(wheel.get_center(), wheel.point_at_angle(0), color=WHITE)
+        self.play(Create(path_line))
+
+        # Animation for the point to move along the circumference
+        self.play(MoveAlongPath(point_p, wheel), run_time=4, rate_func=linear)
+        
+        # Highlight the distance as the point moves
+        moving_distance_text = MathTex(f"Distance = {circumference:.2f}m").next_to(path_line, DOWN)
+        self.play(Write(moving_distance_text))
+
+        # Final state after the full 360-degree rotation
+        self.wait(1)
+
+
 # manim -pql scene.py CreateCircle(name of the class)
 class CreateCircle(Scene):
     def construct(self):
@@ -174,4 +267,40 @@ class MoveAround(Scene):
         self.play(square.animate.scale(0.3))
         self.play(square.animate.rotate(0.4))
 
+
+#manim -pql circle_rotation.py CircleRotation
+
+class CircleRotation(Scene):
+    def construct(self):
+        # Define circle parameters
+        circle_radius = 5
+        circle = Circle(radius=circle_radius, color=BLUE)
+        circle.move_to(ORIGIN)
+        
+        # Point P on the circle
+        point_p = circle.point_at_angle(PI / 4)  # Point P at 45 degrees
+        dot_p = Dot(point_p, color=RED)
+        label_p = MathTex("P", color=RED).next_to(dot_p, UP)
+        
+        # Point P' after 180-degree rotation
+        point_p_prime = circle.point_at_angle(PI / 4 + PI)  # 180 degrees from P
+        dot_p_prime = Dot(point_p_prime, color=GREEN)
+        label_p_prime = MathTex("P'", color=GREEN).next_to(dot_p_prime, DOWN)
+        
+        # Draw circle and points
+        self.play(Create(circle))
+        self.play(FadeIn(dot_p, label_p))
+        self.play(FadeIn(dot_p_prime, label_p_prime))
+        
+        # Draw line between P and P'
+        line = Line(point_p, point_p_prime, color=YELLOW)
+        self.play(Create(line))
+        
+        # Add distance text
+        distance = 2 * circle_radius  # Distance between P and P'
+        distance_text = MathTex(f"Distance = {distance}\\,m").to_edge(DOWN)
+        self.play(Write(distance_text))
+        
+        # Wait and hold the scene
+        self.wait()
 

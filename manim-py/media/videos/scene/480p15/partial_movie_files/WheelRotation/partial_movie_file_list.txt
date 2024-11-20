@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/WheelRotation/1185818338_2041840901_223132457.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/WheelRotation/624642324_160029007_951039640.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/WheelRotation/624642324_2231759057_3350003077.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/WheelRotation/624642324_1986328977_2639789784.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/WheelRotation/624642324_1428107720_2217083053.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/480p15/partial_movie_files/WheelRotation/624642324_2919340033_2010050798.mp4'

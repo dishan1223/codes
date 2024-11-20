@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/1080p60/partial_movie_files/CircleRotation/3529212410_4221834559_223132457.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/1080p60/partial_movie_files/CircleRotation/3040924799_2415527683_3692818805.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/1080p60/partial_movie_files/CircleRotation/3040924799_1774598721_3522008415.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/1080p60/partial_movie_files/CircleRotation/3040924799_435931727_246821229.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/1080p60/partial_movie_files/CircleRotation/3040924799_992799560_1842096332.mp4'
+file 'file:/home/wx/repos/codes/manim-py/media/videos/scene/1080p60/partial_movie_files/CircleRotation/3040924799_1733944848_882979877.mp4'
